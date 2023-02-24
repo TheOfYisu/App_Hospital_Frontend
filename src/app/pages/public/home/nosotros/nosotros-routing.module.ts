@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {NosotrosComponent} from "./nosotros.component";
 
 const routes: Routes = [
-  {path:'',loadChildren:()=>import('./home/home.module').then(m=>m.HomeModule)},
-  {path:'login',loadChildren:()=>import('./home/login/login.module').then(m=>m.LoginModule)}
+  {path:'',component:NosotrosComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PublicRoutingModule { }
+export class NosotrosRoutingModule { }
